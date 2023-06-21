@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link 
+     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
+     rel="stylesheet"
+    />
+<style>
+   .icon{
+    position: absolute;
+    top: 15px;
+    right: 350px;
+   }
+   .buton{
+    position: absolute;
+    top: -130px;
+    right: 800px;
+   }
+   .dropdown {
+  position: absolute;
+  width: 250px;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin-top: 0.3rem;
+  background: white;
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+    
+  transform: translateY(0.5rem);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+  transform: translateY(0rem);
+  visibility: visible;
+  opacity: 1;
+}
+
+.arrow {
+  transform: rotate(180deg);
+  transition: 0.2s ease;
+}
+   .btn {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: var(--gap);
+  padding: 0.6rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.bx {
+  font-size: 1.1rem;
+}
+
+.dropdown {
+  position: absolute;
+  width: 250px;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin-top: 0.3rem;
+  background: white;
+}
+
+.dropdown a {
+  display: flex;
+  align-items: center;
+  column-gap: var(--gap);
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown a:hover {
+  background-color: var(--color);
+  color: white;
+}
+   .search{
+    position: absolute;
+    top: -130px;
+    right: 750px;
+   }
+   .frame{
+    position: absolute;
+    top: -585px;
+    right: 20px;
+   }
+   .position{
+        position: absolute;
+        top: -70px;
+        left: 60px;
+
+    }
+.cols{
+    margin-right: 1400px;
+    margin-left: 20px;
+}
+
+</style>
+</head>
+<body>
+    <div class="flex items-center justify-between bg-black ">
+            <h1 class="text-white text-4xl pl-16 my-16 ">Artopia</h1>
+            <ul class="text-white my-16 font-medium flex items-center justify-between ml-16  ">
+                <li class="px-4 mx-12  "><a href="">Discover</a></li>
+                <li class="px-4 mx-12 "><a href="">Forum</a></li>
+                <li class="px-4 mx-12 "><a href="">News</a></li>
+                <li class="px-4 mx-12 "><a href="">Blog</a></li>
+            </ul>
+            <img class="mr-16" src="assets/images/Vector (3).png" alt="">
+            <img src="assets/images/Vector (4).png" alt="">
+            <img src="assets/images/Ellipse 544.png" alt="">
+            <img class="mr-16" src="assets/images/Vector (5).png" alt="">
+        </div>
+        <div class="" >
+            <img src="assets/images/Frame 162857.png" width="2000" alt="">
+
+        </div>
+        <div class="relative bg-black " >
+            <img  class="position" src="assets/images/Ellipse 546.png" alt="">
+            <h1 class="text-white px-14 pt-20" >3d artist and modeler</h1>
+            <p class="text-white px-20 py-2 flex" >Portfolio <img  class="px-2" src="assets/images/Vector (6).png" alt=""> </p>
+            <h1 class="text-white px-12 py-2 flex " >Dubai,United Arab Emirates <img class="px-2" src="assets/images/ion_location-outline.png" alt=""> </h1>
+            <button class="bg-violet-800  mx-10 px-16 py-4 text-white flex " ><img  src="assets/images/Group.png" alt=""> <h1 class="px-2" >Follow</h1> </button>
+        </div>
+  
+       
+<hr>
+        <div class="flex items-center justify-between" style="background-color: black;">
+            
+                <div class="">
+                    <div class="flex items-center justify-between" >
+                    <h1 class="text-white py-4 px-4" >46</h1>
+                    <h1 class="text-white py-4 px-4 "  >27</h1>
+                    <h1 class="text-white py-4 px-4 "  >142</h1>
+                    <h1 class="text-white py-4 px-4 " >342</h1>
+                </div>
+                    <div class="flex items-center justify-between" >
+                    <h1 class="text-white py-4 px-4 "  >Followers</h1>
+                    <h1 class="text-white py-4 px-4 " >Following</h1>
+                    <h1 class="text-white py-4 px-4 " >Items</h1>
+                    <h1 class="text-white py-4 px-4 " >Likes</h1>
+                </div>
+                </div>
+                <div class="relative" >
+                    <input class=" ml-16 px-20 py-4 bg-slate-200 "  type="text" placeholder="Search by name or attribute">
+                    <img class="icon  border bg-slate-200" src="assets/images/search.png" alt="">
+                </div>
+                <div class="mr-16" >
+            <button class="btn " id="btn">
+                Dropdown
+                <i class="bx bx-chevron-down" id="arrow"></i>
+              </button>
+              
+              <div class="dropdown " id="dropdown">
+                <a href="#create">
+                  <i class="bx bx-plus-circle"></i>
+                  Price:Low to High
+                </a>
+                <a href="#draft">
+                  <i class="bx bx-book"></i>
+                 Price:High to low
+                </a>
+                <a href="#profile">
+                  <i class="bx bx-user"></i>
+                  Free
+                </a>
+              </div>
+            
+        </div>
+        </div>
+        
+
+        <hr>
+      <div class="bg-black pt-6" >
+        <button class="text-violet-800 border border-violet-800 flex bg-black ml-12 px-16 py-4  " > <img src="assets/images/material-symbols_upload.png" alt=""> <h1 class="px-2" > Upload Product</h1> </button>
+    </div>
+    <div class="relative" >
+        <img class="frame" src="assets/images/Frame 162862.png" alt="">
+    </div>
+   
+    
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <footer class="my-6  bg-gradient-to-r from-black to-violet-800 " >
+        <div class="flex items-center justify-between" >
+         <div >
+         <h1 class="text-white py-6 font-bold text-2xl " >Artopia</h1>
+         <p class="text-slate-400 py-4 " >Enter your email to get notified by ArtBit for latest updates.</p>
+     <img  class="py-4 px-10" src="assets/images/Socials.png" alt="">
+     <div class="relative" >
+     <input class="px-4 py-2 border bg-slate-800 mb-6 " type="text" placeholder="Email Address">
+             <button class=" right-4 border-violet-800  text-white  "  type="submit" ><img src="assets/images/arrow-left.png" alt=""> </button>
+         </div>
+     </div>
+     <div>
+         <h1 class="text-white" >Artopia</h1>
+         <p class="text-slate-400" >Explore</p>
+         <p class="text-slate-400" >Digital Art</p>
+         <p class="text-slate-400" >About</p>
+     </div>
+     <div>
+         <h1 class="text-white" >My Account</h1>
+         <p class="text-slate-400" >Profile</p>
+         <p class="text-slate-400" >Favourites</p>
+         <p class="text-slate-400" >Watchlist</p>
+         <p class="text-slate-400" >My Collections</p>
+         <p class="text-slate-400" >Settings</p>
+     </div>
+     <div>
+         <h1 class="text-white" >Resources</h1>
+         <p class="text-slate-400" >Platform Status</p>
+         <p class="text-slate-400" >Partners</p>
+         <p class="text-slate-400" >Taxes</p>
+        <p class="text-slate-400" >Newsletter</p>    
+     </div>
+     <div>
+         <h1 class="text-white" >Community</h1>
+         <p class="text-slate-400" >Help Center</p>
+         <p class="text-slate-400" >Suggest Feature</p>
+         <p class="text-slate-400" >Subscribe</p>
+     </div>
+     </div>
+     <hr>
+     <div class="flex px-8 py-10 " >
+         <p class="text-slate-200 px-8 " >Terms</p>
+         <p class="text-slate-200" >Privacy Policy</p>
+     </div>
+     <hr>
+     <h1 class="text-white font-medium text-xl  text-center my-6 " >© Artopia, Inc @ All Rights Reserved</h1>
+       </footer>
+    <script>
+        const dropdownBtn = document.getElementById("btn");
+const dropdownMenu = document.getElementById("dropdown");
+const toggleArrow = document.getElementById("arrow");
+const toggleDropdown = function () {
+  dropdownMenu.classList.toggle("show");
+  toggleArrow.classList.toggle("arrow");
+};
+dropdownBtn.addEventListener("click", function (e) {
+  e.stopPropagation();
+  toggleDropdown();
+});
+document.documentElement.addEventListener("click", function () {
+  if (dropdownMenu.classList.contains("show")) {
+    toggleDropdown();
+  }
+});
+
+    </script>
+    </body>
+</html>
