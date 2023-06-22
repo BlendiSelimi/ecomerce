@@ -11,6 +11,70 @@
         padding-left: 5cm;
         padding-right: 6cm;
     }
+    .dropdown {
+  position: absolute;
+  width: 250px;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin-top: 0.3rem;
+  background: white;
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+    
+  transform: translateY(0.5rem);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+  transform: translateY(0rem);
+  visibility: visible;
+  opacity: 1;
+}
+
+.arrow {
+  transform: rotate(180deg);
+  transition: 0.2s ease;
+}
+   .btn {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: var(--gap);
+  padding: 0.6rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.bx {
+  font-size: 1.1rem;
+}
+
+.dropdown {
+  position: absolute;
+  width: 250px;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin-top: 0.3rem;
+  background: white;
+}
+
+.dropdown a {
+  display: flex;
+  align-items: center;
+  column-gap: var(--gap);
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown a:hover {
+  background-color: var(--color);
+  color: white;
+}
 </style>
 </head>
 <body>
@@ -32,10 +96,38 @@
     <div class="px-6 py-4" >
       
         <h1 class="text-slate-200 py-4 text-4xl"> Discover/Illustration/300 Male Character Reference Pack︱4K︱v.1 </h1>
-        <div class=" flex " >
-        <p class="text-white py-4 px-16 " >by <a class="text-violet-800" href="">Ameliae Breedlove</a> in <a class="text-violet-800" href="">Illustration</a> </p>
+        <div class=" flex justify-between " >
+        <div class="flex" >
+            <p class="text-white py-4 px-16 " >by <a class="text-violet-800" href="">Ameliae Breedlove</a> in <a class="text-violet-800" href="">Illustration</a> </p>
     <p class="bg-violet-400 py-4 px-2 text-white" >5.0</p>  
     <p class="text-slate-200 py-4 " >Based on 10 ratings, 2 reviews</p> 
+</div>
+<div class="flex " >
+    <img class="px-4" src="assets/images/Vector (7).png" alt="">
+    <p class="text-white px-4"   >124.6k</p>
+    <div class="mr-16 px-4 " >
+        <button class="btn " id="btn">
+            ...
+            <i class="bx bx-chevron-down" id="arrow"></i>
+          </button>
+          
+          <div class="dropdown " id="dropdown">
+            <a href="#create">
+              <i class="bx bx-plus-circle"></i>
+              Weekly
+            </a>
+            <a href="#draft">
+              <i class="bx bx-book"></i>
+            Monthly
+            </a>
+            <a href="#profile">
+              <i class="bx bx-user"></i>
+              Yearly
+            </a>
+          </div>
+        
+    </div>
+</div>
     </div>
     </div>
     <div class="flex mx-8"  >
@@ -86,5 +178,57 @@
     </h1>
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const dropdownBtn = document.getElementById("btn");
+const dropdownMenu = document.getElementById("dropdown");
+const toggleArrow = document.getElementById("arrow");
+const toggleDropdown = function () {
+  dropdownMenu.classList.toggle("show");
+  toggleArrow.classList.toggle("arrow");
+};
+dropdownBtn.addEventListener("click", function (e) {
+  e.stopPropagation();
+  toggleDropdown();
+});
+document.documentElement.addEventListener("click", function () {
+  if (dropdownMenu.classList.contains("show")) {
+    toggleDropdown();
+  }
+});
+
+    </script>
 </body>
 </html>
