@@ -35,10 +35,8 @@
   .topnav a:hover {
     color: black;
   }
-  * {box-sizing:border-box}
-
-
-.slideshow-container {
+  
+  .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
@@ -107,11 +105,6 @@
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-
 .fade {
   animation-name: fade;
   animation-duration: 1.0s;
@@ -122,12 +115,10 @@
   to {opacity: 1}
 }
 
-  
-  
-    </style>
+</style>
 </head>
 <body class="bg-black">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <div class="bg-gradient-to-r from-violet-800 to-black">
     <div class="topnav">
         <a href="#home" class="active"><h1 class="text-2xl text-white font-bold">Artopia</h1></a>
@@ -143,9 +134,9 @@
           <i class="fa fa-bars"></i>
         </a>
         <div class="flex">
-            <div>
-                <img src="assets/images/internship1.jpg" alt="" width="170px">
-                <img src="assets/images/desktop-wallpaper-sunrise-illustration-digital-art-phone-background-and-mocah.jpg" alt="" width="150px">
+            <div class="flex my-24">
+                <img class="w-20 h-32" src="assets/images/internship1.jpg" alt="">
+                <img class="w-14 h-20 mt-6 mr-6" src="assets/images/desktop-wallpaper-sunrise-illustration-digital-art-phone-background-and-mocah.jpg" alt="" width="150px">
             </div>
             <div>
                 <h1 class="text-2xl text-white my-2 ml-4">Buy and Sell Digital <br>Digital Arts</h1>
@@ -167,44 +158,45 @@
         <div class="slideshow-container">
 
 
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 5</div>
-              <img src="assets/images/Bandai_Namco_Holdings_logo_(2022,_with_tagline) 1.png" style="width:100%">
-            </div>
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="assets/images/Bandai_Namco_Holdings_logo_(2022,_with_tagline) 1.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="assets/images/BioWare_logo 1.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="assets/images/Bethesda_Game_Studios_logo 1.png" style="width:100%">
+          </div>
           
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 5</div>
-              <img src="assets/images/BioWare_logo 1.png" style="width:100%">
-            </div>
-          
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 5</div>
-              <img src="assets/images/Bethesda_Game_Studios_logo 1.png" style="width:100%">
+          <div class="mySlides fade">
+              <div class="numbertext">4 / 5</div>
+              <img src="assets/images/Ensemble_Studios_Logo 1.png" style="width:100%">
             </div>
             
             <div class="mySlides fade">
-                <div class="numbertext">4 / 5</div>
-                <img src="assets/images/Ensemble_Studios_Logo 1.png" style="width:100%">
-              </div>
-              
-              <div class="mySlides fade">
-                <div class="numbertext">5 / 5</div>
-                <img src="assets/images/Component 4.png" style="width:100%">
-              </div>
-          
-    
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          </div>
-          <br>
-          
-          
-          <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-          
+              <div class="numbertext">5 / 5</div>
+              <img src="assets/images/Component 4.png" style="width:100%">
+            </div>
+        
+  
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        
+
         <img src="assets/images/Divider (2).png" alt="">
         <div>
             <h1 class="text-2xl text-white mt-4 mb-2">Trending Sales</h1>
@@ -279,7 +271,7 @@
             <h1 class="text-white text-xl font--bold mt-4 mb-2 text-center">Top Creator</h1>
             <div class="text-center ">
                 <p class="text-white">Checkout Top Rated Creators On The NFT Marketplace</p>
-                <button class="text-violet-400 border border-violet-800 px-4 py-2 flex text-center"><img class="pr-2" src="assets/images/RocketLaunch.png" alt="">View rankings</button>
+                <div class="flex justify-center"><button class="text-violet-400 border border-violet-800 px-4 py-2 flex"><img class="pr-2" src="assets/images/RocketLaunch.png" alt="">View rankings</button></div>
             </div>
             <div>
                 <div class="bg-slate-600 rounded-lg my-6 mx-4 ">
@@ -510,5 +502,91 @@
     <span class="dot" onclick="currentSlide(3)"></span>
   </div>
 
+  <div>
+    <h1 class="font-bold text-xl text-white text-center my-6">Get started in 3 Steps</h1>
+    <div class="border border-slate-200 py-4" >
+      <div class="items-center">
+        <div class="flex justify-center"><img class="first" src="assets/images/Vector.png" alt=""></div>  
+      <h2 class="text-white text-xl py-4 text-center" > Upload your best art</h2>
+      <p class="text-white text-center" >Start the upload by creating an account</p>
+  </div>
+     </div>
+  </div>
+  <div class="border border-slate-200 my-6">
+    <div class="container mx-auto">
+     <div class="flex justify-center mt-4"><img class="second" src="assets/images/NFT Pic.png " alt=""></div>
+     <h2 class="text-white text-xl py-4 text-center" >Fill out the product info</h2>
+    <p class="text-white text-center">Fill out the required information and pricing and  you are set</p>
+ </div>
+    </div>
+    <div class="border border-slate-200">
+      <div class="container mx-auto">
+       <div class="flex justify-center mt-4"><img class="last" src="assets/images/Vector (1).png" alt=""></div>
+       <h2 class="text-white text-xl py-4 text-center " >Start Selling & Growing </h2>
+       <p class="text-white text-center" >Choose Between Auctions,Fixed-Price Listings, And Declining-Price Listings. You Choose How You Want To Sell Your NFTs!</p>
+   </div>
+      </div>
+      <div class="flex">
+        <img class="w-16 mt-6 mb-4" src="assets/images/Left Element.png" alt="">
+        <h1 class="text-white text-xl mt-6 mb-4">Subscribe to get fresh news and updates  about Digital Art</h1>
+      </div>
+      <div>
+        <p class="text-white">The World's Largest Digital Marketplace for digital art and 3d assets</p>
+      <div class="flex">
+        <input class="px-4 py-2" type="text" placeholder="Email Address">
+        <button class="border border-violet-800 py-2 px-4 text-white bg-violet-800"  type="submit" >Submit </button>
+      </div>
+        </div>
+        <footer class="bg-gradient-to-r from-violet-800 to-black">
+          <div >
+            <h1 class="text-white py-6 font-bold text-2xl mt-6" >Artopia</h1>
+            <p class="text-slate-400 py-4 " >Enter your email to get notified by ArtBit for latest updates.</p>
+      <div class="flex justify-center"><img  class="py-4 px-10" src="assets/images/Socials.png" alt=""></div>
+      <div class="flex items-center justify-center">
+        <div class="relative inline-block mb-4">
+          <input class="px-2 py-2 border bg-slate-800" type="text" placeholder="Email Address">
+          <button class="absolute right-[10px] top-[50%] translate-y-[-50%]  border-violet-800 text-white"  type="submit" >
+            <img src="assets/images/arrow-left.png" alt=""> 
+            <!-- asd -->
+          </button>
+        </div>
+      </div>
+            <div class="mb-4 text-center" >
+              <a href=""><h1 class="text-white" >Artopia</h1></a>
+              <a href=""><p class="text-slate-400" >Explore</p></a>
+              <a href=""><p class="text-slate-400" >Digital Art</p></a>
+              <a href=""><p class="text-slate-400" >About</p></a>
+          </div>
+          <div class="mb-4 text-center">
+              <h1 class="text-white" >My Account</h1>
+              <a href=""><p class="text-slate-400" >Profile</p></a>
+              <a href=""><p class="text-slate-400" >Favourites</p></a>
+              <a href=""><p class="text-slate-400" >Watchlist</p></a>
+              <a href=""><p class="text-slate-400" >My Collections</p></a>
+              <a href=""><p class="text-slate-400" >Settings</p></a>
+          </div>
+          <div class="mb-4 text-center">
+              <h1 class="text-white" >Resources</h1>
+             <a href=""> <p class="text-slate-400" >Platform Status</p></a>
+             <a href=""><p class="text-slate-400" >Partners</p></a>
+              <a href=""><p class="text-slate-400" >Taxes</p></a>
+              <a href=""><p class="text-slate-400" >Newsletter</p></a>
+          </div>
+          <div class="mb-4 text-center">
+            <a href=""> <h1 class="text-white" >Community</h1></a>
+              <a href=""> <p class="text-slate-400" >Help Center</p></a>
+                <a href=""> <p class="text-slate-400" >Suggest Feature</p></a>
+                  <a href=""> <p class="text-slate-400" >Subscribe</p></a>
+          </div>
+          </div>
+          <hr>
+          <div class="flex px-8 py-10 " >
+              <p class="text-slate-200 px-8 " >Terms</p>
+              <p class="text-slate-200" >Privacy Policy</p>
+          </div>
+          <hr>
+          <h1 class="text-white font-medium text-center my-6 " >© Artopia, Inc @ All Rights Reserved</h1>
+            </footer>
+        
 </body>
 </html>
