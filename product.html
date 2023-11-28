@@ -98,6 +98,78 @@
   background-color: var(--color);
   color: white;
 }
+.dropdown-menu {
+  position: relative;
+  perspective: 200px;
+}
+
+.dropdown-menu button {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 15px;
+  padding: 0 16px;
+  width: 130px;
+  height: 72px;
+  color: #fefefe;
+  background: transparent;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Cambria";
+}
+
+.dropdown-menu > button {
+  position: relative;
+  z-index: 2;
+  background: #00000073;
+  transition: 0.3s;
+}
+
+.main-menu {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  height: 100px;
+  opacity: 0;
+  transform-origin: 100% 0%;
+  scale: 0;
+  visibility: hidden;
+  border-radius: 8px;
+  background: #00000073;
+  transition: 0.4s;
+}
+
+.dropdown-menu.open .main-menu {
+  scale: 1;
+  right: 0;
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-menu button {
+  border: 0;
+  width: 100%;
+  height: 55px;
+  border-radius: 0;
+}
+
+.main-menu button:hover {
+  background: #00000042;
+}
+
+.chevron {
+  margin-left: auto;
+  transition: 0.4s;
+}
+
+.dropdown-menu.open .chevron {
+  rotate: 180deg;
+}
+
     </style>
 </head>
 <body class="bg-black">
@@ -170,7 +242,79 @@
           </p><br>
           <p>Files(1)</p><br>
           <p>Quantity</p><br>
-          <button class="bg-violet-800 cm py-4 my-4 w-[100%]">Add to Cart</button><br>
+          <div class="flex justify-center"><button class="btnn bg-violet-800 cm py-4 my-4 w-[100%]" onclick="my_modal_1.showModal()">Add to cart</button></div>
+      <dialog id="my_modal_1" class="modal">
+        <div class="modal-box rounded-lg">
+      <div class="flex justify-between m-2">
+        <div class="flex">
+          <h1 class="font-bold mx-2 text-xl">Your Cart</h1>
+          <img src="assets/images/vector1.1.png" alt="">
+      </div>
+<div class="mx-2">
+  <img src="assets/images/Border.png" alt="">
+</div>
+      </div>
+      <div class="flex justify-between mx-4 my-8">
+        <h1 class="text-slate-400">3 Items</h1>
+        <h1 class="text-slate-400">Clear all</h1>
+      </div>    
+      <div class="flex justify-between">
+        <div><img src="assets/images/Paste Img Here.png" alt=""></div>
+        <div>
+          <h1 class="font-bold">Product Item name</h1>
+          <h2 class="text-slate-400">License</h2>
+          <main class="dropdown-menu" id="dropdown-menu">
+            <button id="dropdown-button" onclick="toggleDropdownMenu()">
+              <span class="material-symbols-outlined">
+                Standart
+              </span>
+              <span id="chevron" class="chevron material-symbols-outlined">
+                
+              </span>
+            </button>
+            <section id="main-menu" class="main-menu">
+              <button>
+                <span class="material-symbols-outlined">Small</span>
+              </button>
+              <button>
+                <span class="material-symbols-outlined">
+                  Large
+                </span>
+              </button>              
+            </section>
+          </main>
+        </div>
+        <div>
+          <div class="flex justify-between"> 
+            <img class="w-[20px]" src="assets/images/pencil.jpg" alt="">
+            <img src="assets/images/Border.png" alt="">
+          </div>
+          <h1 class="my-4 font-bold text-xl text-center">20 USD</h1>
+        </div>
+      </div>
+      <div class="flex justify-between my-2">
+        <h1>Original price</h1>
+        <h1 class="font-bold">$20.00</h1>
+      </div>
+      <div class="flex justify-between my-2">
+        <h1>VAT(Czech Republic)</h1>
+        <div class="flex">
+          <h1 class="text-slate-400">($4)</h1>
+          <h1 class="font-bold">20%</h1>
+        </div>
+      </div>
+      <div class="flex justify-between my-2">
+        <h1 class="font-bold">Discounted price</h1>
+        <div class="flex">
+          <h1 class="text-slate-400">(save $5)</h1>
+          <h1 class="font-bold">$19.00</h1>
+        </div>
+      </div>
+        </div>
+             <div class="flex justify-center my-2"><a href=""><button class="btnn bg-violet-800 px-14 py-2 text-white rounded-lg ">Checkout</button></a></div>
+        </div>
+      </dialog>  
+          
           <button class=" border py-4 border-violet-800 cm text-white w-[100%]  ">Bookmark</button>
         </div>
       </div>
@@ -382,6 +526,30 @@
         }
       });
 
+      const dropdownButton = document.getElementById("dropdown-button");
+const buttonBoundingClientRect = dropdownButton.getBoundingClientRect();
+const chevron = document.getElementById("chevron");
+const chevronBoudingClientRect = chevron.getBoundingClientRect();
+const rightMenu =
+  buttonBoundingClientRect.right - chevronBoudingClientRect.right;
+const topMenu = chevronBoudingClientRect.top - buttonBoundingClientRect.top;
+
+const mainMenu = document.getElementById("main-menu");
+mainMenu.style.top = `${topMenu}px`;
+mainMenu.style.right = `${rightMenu}px`;
+
+const toggleDropdownMenu = () => {
+  const dropdownMenu = document.getElementById("dropdown-menu");
+  if (dropdownMenu.classList.contains("open")) {
+    mainMenu.style.top = `${topMenu}px`;
+    mainMenu.style.right = `${rightMenu}px`;
+  } else {
+    mainMenu.style.top = `${dropdownButton.clientHeight + 10}px`;
+    mainMenu.style.right = 0;
+  }
+
+  dropdownMenu.classList.toggle("open");
+};
     </script>
 </body>
 </html>
