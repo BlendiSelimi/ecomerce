@@ -311,11 +311,47 @@
         </div>
       </div>
         </div>
-             <div class="flex justify-center my-2"><a href=""><button class="btnn bg-violet-800 px-14 py-2 text-white rounded-lg ">Checkout</button></a></div>
+       <div class="flex justify-center"><button class="btnn bg-violet-800 px-14 py-2 rounded-lg text-white my-2" onclick="my_modal_2.showModal()">Checkout</button></div>
+       <dialog id="my_modal_2" class="modal">
+         <div class="modal-box rounded-lg">
+          <div class="flex justify-between my-4 mx-2">
+            <h1 class="text-xl font-bold">Checkout</h1>
+            <img src="assets/images/Border.png" alt="">
+          </div>
+          <div>
+            <h1 class="text-slate-400">You are about to purchase</h1>
+            <h1 class="font-bold">+300 Male Character Reference Pack / v.1</h1>
+          </div>
+          <div class="my-4">
+            <div class="flex justify-center"><img src="assets/images/logos_paypal.png" alt=""></div>
+            <div class="my-2">
+              <input class="py-2 bg-slate-200" type="number">
+              <button class="bg-green-500 px-2 py-2 rounded-lg text-white">Connected</button>
+            </div>
+            <div>
+              <input class="py-2 bg-slate-200" type="text" id="PayPal" name="PayPal"> 
+              <button class="px-2 py-2 bg-slate-200 text-slate-400 rounded-lg">Change</button>
+            </div>
+          </div>
+          <div class="flex justify-between my-4">
+            <h1>Service fee</h1>
+            <h1>20%</h1>
+          </div>
+          <div class="flex justify-between my-4">
+            <h1>Marketplace fee,5%</h1>
+            <h1>0.5 ETH</h1>
+          </div>
+          <div class="flex justify-between my-4">
+            <h1>Total Checkout</h1>
+            <h1 class="font-bold">$25.20</h1>
+          </div>
+        </div>
+        <div class="flex justify-center">
+         <form action="">
+          <button class="bg-violet-800 px-14 py-2 text-white rounded-lg my-2">Checkout</button>
+        </form>
         </div>
       </dialog>  
-          
-          <button class=" border py-4 border-violet-800 cm text-white w-[100%]  ">Bookmark</button>
         </div>
       </div>
       <div class="my-12">
