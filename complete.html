@@ -38,9 +38,8 @@
   align-items: center;
   align-content: center;
   gap: 15px;
-  padding: 0 16px;
-  width: 130px;
-  height: 72px;
+  width: 40px;
+  height: 32px;
   color: #fefefe;
   background: transparent;
   border-radius: 8px;
@@ -62,7 +61,7 @@
   overflow: hidden;
   z-index: 1;
   width: 100%;
-  height: 100px;
+  height: 250px;
   opacity: 0;
   transform-origin: 100% 0%;
   scale: 0;
@@ -99,6 +98,22 @@
 .dropdown-menu.open .chevron {
   rotate: 180deg;
 }
+.dropdown-menu1 {
+    max-height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: 0px;
+}
+
+.caret {
+	  float: right;
+    margin-top: 5%;
+}
+
+#menu1 {
+    width: 160px; 
+    text-align: left;
+}
    </style>
 </head>
 <body>
@@ -119,29 +134,38 @@
     </div>
      <div>
         <h1 class="text-center">Phone Number</h1>
-       <div class="flex justify-center">  <main class="dropdown-menu" id="dropdown-menu">
-        <button id="dropdown-button" onclick="toggleDropdownMenu()">
-          <span class="material-symbols-outlined">
-            Standart
-          </span>
-          <span id="chevron" class="chevron material-symbols-outlined">
-            
-          </span>
-        </button>
-        <section id="main-menu" class="main-menu">
-          <button>
-            <span class="material-symbols-outlined">Small</span>
-          </button>
-          <button>
-            <span class="material-symbols-outlined">
-              Large
-            </span>
-          </button>              
-        </section>
-      </main>
+       <div class="flex justify-center inline-block"> <div class="dropdown1">
+        <button class="btn1 btn-default1 dropdown-toggle1" type="button" id="menu1" data-toggle="dropdown1">↓
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu1" role="menu1" aria-labelledby="menu1">
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
           </div>
-        </section>
-      </section>  <input class="border border-slate-950 px-4 py-2" type="number"></div>
+      <input class="border border-slate-950 px-4 py-2" type="number"></div>
      </div>
      <div>
         <h1 class="text-center">Your address</h1>
@@ -174,6 +198,6 @@
 
     <div class="flex justify-center my-4"><button class="bg-violet-800 px-14 py-2 rounded-lg text-white">Save & Continue</button></div>
     <h3 class="text-slate-300 text-center">Your info is safely secured</h3>
-
+<script src="complete.js"></script>
 </body>
 </html>
