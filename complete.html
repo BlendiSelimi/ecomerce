@@ -119,76 +119,26 @@
     </div>
      <div>
         <h1 class="text-center">Phone Number</h1>
-       <div class="flex justify-center"> <section class="dropdown-menu" id="dropdown-menu">
-        <button onclick="handleDropdownClicked(event)">
-          <span class="material-symbols-sharp"> account_circle </span>
-          Administrator
-          <span class="chevron material-symbols-sharp" id="dropdown-icon"> expand_more </span>
+       <div class="flex justify-center">  <main class="dropdown-menu" id="dropdown-menu">
+        <button id="dropdown-button" onclick="toggleDropdownMenu()">
+          <span class="material-symbols-outlined">
+            Standart
+          </span>
+          <span id="chevron" class="chevron material-symbols-outlined">
+            
+          </span>
         </button>
-        <section id="navigation-menu" class="navigation-menu">
-          <div id="main-menu" class="main-menu">
-            <div class="primary-menu">
-              <button onclick="handleMenuLabelClicked('manage-accounts')">
-                <span class="material-symbols-sharp"> manage_accounts </span>
-                Account
-                <span class="chevron material-symbols-sharp">
-                  chevron_right
-                </span>
-              </button>
-              <button onclick="handleMenuLabelClicked('admin-dashboard')">
-                <span class="material-symbols-sharp"> dashboard </span>
-                Dashboard
-                <span class="chevron material-symbols-sharp">
-                  chevron_right
-                </span>
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> logout </span>
-                Sign Out
-              </button>
-            </div>
-            <section id="manage-accounts" class="secondary-menu" onclick="handleMenuLabelClicked()">
-              <button>
-                <span class="material-symbols-sharp"> mark_email_unread </span>
-                Inbox
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> calendar_month </span>
-                Calendar
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> priority </span>
-                Priority
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> forum </span>
-                Community
-              </button>
-            </section>
-            <section id="admin-dashboard" class="secondary-menu" onclick="handleMenuLabelClicked()">
-              <button>
-                <span class="material-symbols-sharp"> data_usage </span>
-                Overview
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> bar_chart_4_bars </span>
-                Performance
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> analytics </span>
-                Analytics
-              </button>
-              <button>
-                <span class="material-symbols-sharp">
-                  insights
-                </span>
-                Insights
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> layers </span>
-                Reports
-              </button>
-            </section>
+        <section id="main-menu" class="main-menu">
+          <button>
+            <span class="material-symbols-outlined">Small</span>
+          </button>
+          <button>
+            <span class="material-symbols-outlined">
+              Large
+            </span>
+          </button>              
+        </section>
+      </main>
           </div>
         </section>
       </section>  <input class="border border-slate-950 px-4 py-2" type="number"></div>
@@ -199,79 +149,27 @@
      </div>
      <div>
         <h1 class="text-center">Country of residence</h1>
-       <div class="flex justify-center "><input class="border border-slate-950 px-4 py-2" type="text"> <section class="dropdown-menu" id="dropdown-menu">
-        <button onclick="handleDropdownClicked(event)">
-          <span class="material-symbols-sharp"> account_circle </span>
-          Administrator
-          <span class="chevron material-symbols-sharp" id="dropdown-icon"> expand_more </span>
+       <div class="flex justify-center "><input class="border border-slate-950 px-4 py-2" type="text">  <main class="dropdown-menu" id="dropdown-menu">
+        <button id="dropdown-button" onclick="toggleDropdownMenu()">
+          <span class="material-symbols-outlined">
+            Standart
+          </span>
+          <span id="chevron" class="chevron material-symbols-outlined">
+            
+          </span>
         </button>
-        <section id="navigation-menu" class="navigation-menu">
-          <div id="main-menu" class="main-menu">
-            <div class="primary-menu">
-              <button onclick="handleMenuLabelClicked('manage-accounts')">
-                <span class="material-symbols-sharp"> manage_accounts </span>
-                Account
-                <span class="chevron material-symbols-sharp">
-                  chevron_right
-                </span>
-              </button>
-              <button onclick="handleMenuLabelClicked('admin-dashboard')">
-                <span class="material-symbols-sharp"> dashboard </span>
-                Dashboard
-                <span class="chevron material-symbols-sharp">
-                  chevron_right
-                </span>
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> logout </span>
-                Sign Out
-              </button>
-            </div>
-            <section id="manage-accounts" class="secondary-menu" onclick="handleMenuLabelClicked()">
-              <button>
-                <span class="material-symbols-sharp"> mark_email_unread </span>
-                Inbox
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> calendar_month </span>
-                Calendar
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> priority </span>
-                Priority
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> forum </span>
-                Community
-              </button>
-            </section>
-            <section id="admin-dashboard" class="secondary-menu" onclick="handleMenuLabelClicked()">
-              <button>
-                <span class="material-symbols-sharp"> data_usage </span>
-                Overview
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> bar_chart_4_bars </span>
-                Performance
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> analytics </span>
-                Analytics
-              </button>
-              <button>
-                <span class="material-symbols-sharp">
-                  insights
-                </span>
-                Insights
-              </button>
-              <button>
-                <span class="material-symbols-sharp"> layers </span>
-                Reports
-              </button>
-            </section>
-          </div>
+        <section id="main-menu" class="main-menu">
+          <button>
+            <span class="material-symbols-outlined">Small</span>
+          </button>
+          <button>
+            <span class="material-symbols-outlined">
+              Large
+            </span>
+          </button>              
         </section>
-      </section></div>
+      </main>
+    </div>
      </div>
 
     <div class="flex justify-center my-4"><button class="bg-violet-800 px-14 py-2 rounded-lg text-white">Save & Continue</button></div>
