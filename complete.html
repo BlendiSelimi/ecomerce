@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://rawgit.com/googlei18n/libphonenumber/master/dist/libphonenumber.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
     <style>
     .dropdown {
   position: absolute;
@@ -115,6 +119,7 @@
     text-align: left;
 }
    </style>
+     
 </head>
 <body>
     <div><img src="assets/images/Frame 1 (1).png" alt=""></div>
@@ -132,72 +137,37 @@
         <h1 class="font-bold text-2xl">Complete Your Profile!</h1>
         <p>For the purpose of industry regulation,your details are required.</p>
     </div>
+<div class="flex justify-center">
+   <form id="phoneForm">
+    <div class="text-center"><label for="phoneNumber">Phone Number:</label></div>
+    <input class="py-2 border border-slate-950" type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+    <br>
+  </form>
+</div>
      <div>
-        <h1 class="text-center">Phone Number</h1>
-       <div class="flex justify-center inline-block"> <div class="dropdown1">
-        <button class="btn1 btn-default1 dropdown-toggle1" type="button" id="menu1" data-toggle="dropdown1">↓
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu1" role="menu1" aria-labelledby="menu1">
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">About Us</a></li>
-        </ul>
-      </div>
-          </div>
-      <input class="border border-slate-950 px-4 py-2" type="number"></div>
+        <div class="flex justify-center"><label class="" for="address">Your Address:</label></div>
+        <div class="flex justify-center"><input class="border border-slate-950 px-8 py-2" type="text" placeholder="Enter Your Address"></div>
      </div>
+     <div class="flex justify-center">
      <div>
-        <h1 class="text-center">Your address</h1>
-        <div class="flex justify-center"><input class="border border-slate-950 px-4 py-2" type="text"></div>
+     <div><label for="countryInput">Enter your country of residence:</label></div>
+     <input class="px-8 py-2 border border-slate-950" type="text" id="countryInput" list="countries" placeholder="Enter your country">
+     <datalist id="countries">
+        <option value="">
+         <option value="United States">
+         <option value="United Kingdom">
+         <option value="India">
+         <option value="Canada">
+         <option value="Australia">
+     </datalist>
      </div>
-     <div>
-        <h1 class="text-center">Country of residence</h1>
-       <div class="flex justify-center "><input class="border border-slate-950 px-4 py-2" type="text">  <main class="dropdown-menu" id="dropdown-menu">
-        <button id="dropdown-button" onclick="toggleDropdownMenu()">
-          <span class="material-symbols-outlined">
-            Standart
-          </span>
-          <span id="chevron" class="chevron material-symbols-outlined">
-            
-          </span>
-        </button>
-        <section id="main-menu" class="main-menu">
-          <button>
-            <span class="material-symbols-outlined">Small</span>
-          </button>
-          <button>
-            <span class="material-symbols-outlined">
-              Large
-            </span>
-          </button>              
-        </section>
-      </main>
     </div>
-     </div>
+
 
     <div class="flex justify-center my-4"><button class="bg-violet-800 px-14 py-2 rounded-lg text-white">Save & Continue</button></div>
     <h3 class="text-slate-300 text-center">Your info is safely secured</h3>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput-jquery.js"></script>
 <script src="complete.js"></script>
 </body>
 </html>
